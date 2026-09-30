@@ -305,7 +305,7 @@ echo " Service:"
 $SUDO systemctl --no-pager --full status dheeraj-ps5-offline-repo.service | sed -n '1,12p'
 echo
 echo "Local test:"
-curl -fsS "http://127.0.0.1:$PORT/payloads.json" | head -n 6
+curl -fsS "http://127.0.0.1:$PORT/payloads.json" | sed -n '1,6p'
 echo
 echo "IMPORTANT: This script did NOT alter eth0, wlan0, DNS, or routing."
 echo "==============================================================================="
